@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoogleTechnology - App Showcase</title>
+    
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Use Inter font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0D0E14;
+            color: #f9fafb;
+            min-height: 100vh;
+        }
+
+        /* Utility for Centering Content */
+        .main-content-wrapper {
+            max-width: 80rem; /* xl */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Hero Text Gradient */
+        .hero-text-gradient {
+            background-image: linear-gradient(90deg, #ffffff, #a78bfa, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* App Card Styling */
+        .app-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            border: 1px solid #1f2937; /* Gray-800 */
+        }
+        .app-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(139, 92, 246, 0.25);
+            border-color: #8b5cf6; /* Violet-500 */
+        }
+
+        /* Custom Play Store Button Style (based on Google's branding) */
+        .play-store-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 16px;
+            border-radius: 9999px; /* Fully rounded */
+            background-color: #4285F4; /* Google Blue */
+            color: white;
+            font-weight: 600;
+            font-size: 0.875rem; /* sm */
+            transition: background-color 0.2s, transform 0.1s;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+        }
+        .play-store-button:hover {
+            background-color: #357ae8; /* Darker blue on hover */
+        }
+        .play-store-button svg {
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Header / Navigation Bar (Consistent across all pages) -->
+    <header class="sticky top-0 z-50 bg-[#0D0E14] backdrop-blur-sm bg-opacity-90 border-b border-gray-800">
+        <div class="main-content-wrapper px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            
+            <!-- Logo -->
+            <div class="flex items-center space-x-2">
+                <a href="/" class="flex items-center space-x-2">
+                    <img 
+                        src="https://moogletechnology.com/wp-content/uploads/2025/11/MOOGLETECHNOLOGY.png" 
+                        alt="MoogleTechnology Logo" 
+                        class="w-8 h-8 object-contain"
+                        onerror="this.onerror=null; this.src='https://placehold.co/32x32/4f46e5/ffffff?text=M'"
+                    >
+                    <span class="text-xl font-bold text-white">MoogleTechnology</span>
+                </a>
+            </div>
+
+            <!-- Nav Links: 'Solutions' is the new link -->
+           <!-- Nav Links -->
+            <nav class="flex items-center space-x-4 md:space-x-6">
+                <a href="/apps-documentation/" class="hidden sm:block text-sm font-medium text-gray-400 hover:text-white transition duration-150">Docs Hub</a>
+                <a href="https://moogletechnology.com/moogle-apps-portfoliio/" class="hidden sm:block text-sm font-medium text-gray-400 hover:text-white transition duration-150">Apps Showcase</a>
+				 <a href="/solution" class="hidden sm:block text-sm font-medium text-violet-400 transition duration-150">Services</a>
+                <a href="/roadmap/" class="hidden sm:block text-sm font-medium text-gray-400 hover:text-white transition duration-150">Road Map</a>
+                <a href="/careers" class="hidden sm:block text-sm font-medium text-violet-400 transition duration-150">Careers</a>
+                <!-- Visit Play Store Button -->
+                <a href="https://play.google.com/store/apps/dev?id=4748487825217087341" target="_blank" class="px-4 py-2 text-sm font-semibold rounded-lg bg-violet-600 hover:bg-violet-700 text-white transition duration-150 shadow-lg shadow-violet-500/50">
+                    Visit Play Store
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+        <!-- Showcase Hero Section -->
+        <section class="pt-24 pb-12 sm:pt-32 sm:pb-16 text-center">
+            <div class="main-content-wrapper px-4 sm:px-6 lg:px-8">
+                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-4">
+                    Our <span class="hero-text-gradient">Released Apps</span> Ecosystem
+                </h1>
+                <p class="mt-6 text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+                    The tools currently available for download on the Google Play Store. All our apps are built with simplicity and high-performance in mind.
+                </p>
+                <a href="https://github.com/MoogleTechnology" target="_blank" class="mt-8 inline-flex items-center text-violet-400 hover:text-violet-300 font-medium transition duration-150">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 0C5.372 0 0 5.372 0 12c0 5.308 3.44 9.808 8.208 11.385.6.11.82-.26.82-.577 0-.28-.01-1.01-.014-2.02-3.34.726-4.04-1.61-4.04-1.61-.546-1.38-.89-1.745-.89-1.745-1.09-.748.08-.733.08-.733 1.21.085 1.848 1.24 1.848 1.24 1.07 1.84 2.81 1.307 3.49.996.11-.775.42-1.308.762-1.61-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.47-2.38 1.24-3.22-.123-.3-.54-1.52.12-3.18 0 0 1.008-.32 3.3-.418 1.05-.145 2.15-.22 3.25-.22 1.1 0 2.2.075 3.25.22 2.29.098 3.3 0 3.3 0 .66 1.66.248 2.88-.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.62-5.47 5.92.43.37.81 1.09.81 2.208 0 1.595-.014 2.883-.014 3.275 0 .32.22.69.82.57C20.56 21.808 24 17.308 24 12 24 5.372 18.628 0 12 0z" clip-rule="evenodd"/></svg>
+                    View our repositories on GitHub
+                </a>
+            </div>
+        </section>
+
+        <!-- App Grid -->
+        <section class="py-16 sm:py-24">
+            <div class="main-content-wrapper px-4 sm:px-6 lg:px-8">
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+
+                    <!-- App Card 1: CogniaSolve: AI Math Studio -->
+                    <div class="app-card rounded-xl overflow-hidden bg-gray-800/50 shadow-2xl">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-[#00A389] rounded-lg flex items-center justify-center text-xl font-bold text-white mr-4">
+                                    <span class="text-2xl">G</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">CogniaSolve: AI Math Studio</h3>
+                                    <p class="text-sm text-gray-400">AI Math & Study Tool (Free)</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 mb-6 text-base h-20 overflow-hidden">
+                                Your comprehensive math and science problem solver. Provides step-by-step explanations and deep conceptual understanding using AI assistance.
+                            </p>
+                            
+                            <div class="flex flex-col space-y-3">
+                                <a href="https://play.google.com/store/apps/details?id=com.moogle.cogniasolve" target="_blank" class="play-store-button">
+                                    <!-- Google Play Icon (simplified SVG) -->
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M2.51 2.91C2.5 2.5 2.5 2.5 2.51 2.91L2.51 21.09C2.5 21.5 2.5 21.5 2.51 21.09L2.51 2.91ZM5.52 12L5.52 12.01L5.52 12Z" fill="white"/><path d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0C5.373 0 0 5.373 0 12s5.373 12 12 12zM6.9 3.63L19.5 12 6.9 20.37V3.63z" fill="white"/><path d="M6.9 3.63v16.74L19.5 12 6.9 3.63z" fill="#00C853"/></svg>
+                                    Get on Google Play
+                                </a>
+                                <a href="https://github.com/MoogleTechnology/CogniaSolve" target="_blank" class="text-xs font-medium text-gray-400 hover:text-white transition duration-150 text-center">
+                                    View Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- App Card 2: VocabGraph: Dictionary & Graph -->
+                    <div class="app-card rounded-xl overflow-hidden bg-gray-800/50 shadow-2xl">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-[#8A3AB7] rounded-lg flex items-center justify-center text-xl font-bold text-white mr-4">
+                                    <span class="text-2xl">V</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">VocabGraph: Dictionary & Graph</h3>
+                                    <p class="text-sm text-gray-400">Visual Learning Tool (Free)</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 mb-6 text-base h-20 overflow-hidden">
+                                Learn vocabulary visually by mapping connections between words. Uses graph technology to show semantic relationships and synonyms.
+                            </p>
+                            
+                            <div class="flex flex-col space-y-3">
+                                <a href="https://play.google.com/store/apps/details?id=com.moogle.vocabgraph" target="_blank" class="play-store-button">
+                                    <!-- Google Play Icon (simplified SVG) -->
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M2.51 2.91C2.5 2.5 2.5 2.5 2.51 2.91L2.51 21.09C2.5 21.5 2.5 21.5 2.51 21.09L2.51 2.91ZM5.52 12L5.52 12.01L5.52 12Z" fill="white"/><path d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0C5.373 0 0 5.373 0 12s5.373 12 12 12zM6.9 3.63L19.5 12 6.9 20.37V3.63z" fill="white"/><path d="M6.9 3.63v16.74L19.5 12 6.9 3.63z" fill="#00C853"/></svg>
+                                    Get on Google Play
+                                </a>
+                                <a href="https://github.com/MoogleTechnology/VocabGraph" target="_blank" class="text-xs font-medium text-gray-400 hover:text-white transition duration-150 text-center">
+                                    View Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- App Card 3: Folio: Offline Ebook Reader -->
+                    <div class="app-card rounded-xl overflow-hidden bg-gray-800/50 shadow-2xl">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center text-xl font-bold text-white mr-4">
+                                    <span class="text-2xl">F</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">Folio: Offline Ebook Reader</h3>
+                                    <p class="text-sm text-red-400">Ebook Utility ($9.99)</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 mb-6 text-base h-20 overflow-hidden">
+                                A premium reader focused on privacy and reading comfort. Supports multiple formats and includes customizable fonts and offline capabilities.
+                            </p>
+                            
+                            <div class="flex flex-col space-y-3">
+                                <a href="https://play.google.com/store/apps/details?id=com.moogle.folio" target="_blank" class="play-store-button">
+                                    <!-- Google Play Icon (simplified SVG) -->
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M2.51 2.91C2.5 2.5 2.5 2.5 2.51 2.91L2.51 21.09C2.5 21.5 2.5 21.5 2.51 21.09L2.51 2.91ZM5.52 12L5.52 12.01L5.52 12Z" fill="white"/><path d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0C5.373 0 0 5.373 0 12s5.373 12 12 12zM6.9 3.63L19.5 12 6.9 20.37V3.63z" fill="white"/><path d="M6.9 3.63v16.74L19.5 12 6.9 3.63z" fill="#00C853"/></svg>
+                                    Get on Google Play
+                                </a>
+                                <a href="https://github.com/MoogleTechnology/Folio" target="_blank" class="text-xs font-medium text-gray-400 hover:text-white transition duration-150 text-center">
+                                    View Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- App Card 4: BROPay - Smart Bill Reminder -->
+                    <div class="app-card rounded-xl overflow-hidden bg-gray-800/50 shadow-2xl">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-[#42426F] rounded-lg flex items-center justify-center text-xl font-bold text-white mr-4">
+                                    <span class="text-2xl">B</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">BROPay - Smart Bill Reminder</h3>
+                                    <p class="text-sm text-red-400">Financial Utility ($6.99)</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 mb-6 text-base h-20 overflow-hidden">
+                                Intelligent reminder system to track and manage monthly bills, ensuring you never miss a payment deadline. Integrates with calendar events.
+                            </p>
+                            
+                            <div class="flex flex-col space-y-3">
+                                <a href="https://play.google.com/store/apps/details?id=com.moogle.bropay" target="_blank" class="play-store-button">
+                                    <!-- Google Play Icon (simplified SVG) -->
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M2.51 2.91C2.5 2.5 2.5 2.5 2.51 2.91L2.51 21.09C2.5 21.5 2.5 21.5 2.51 21.09L2.51 2.91ZM5.52 12L5.52 12.01L5.52 12Z" fill="white"/><path d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0C5.373 0 0 5.373 0 12s5.373 12 12 12zM6.9 3.63L19.5 12 6.9 20.37V3.63z" fill="white"/><path d="M6.9 3.63v16.74L19.5 12 6.9 3.63z" fill="#00C853"/></svg>
+                                    Get on Google Play
+                                </a>
+                                <a href="https://github.com/MoogleTechnology/BROPay" target="_blank" class="text-xs font-medium text-gray-400 hover:text-white transition duration-150 text-center">
+                                    View Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- App Card 5: Quick Note Bubble Reader -->
+                    <div class="app-card rounded-xl overflow-hidden bg-gray-800/50 shadow-2xl">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-[#8258F2] rounded-lg flex items-center justify-center text-xl font-bold text-white mr-4">
+                                    <span class="text-2xl">Q</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">Quick Note Bubble Reader</h3>
+                                    <p class="text-sm text-red-400">Contextual Note-taking ($5.49)</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 mb-6 text-base h-20 overflow-hidden">
+                                Floating widget for instant, contextual note-taking across any application. Designed to minimize interruption during reading or browsing.
+                            </p>
+                            
+                            <div class="flex flex-col space-y-3">
+                                <a href="https://play.google.com/store/apps/details?id=com.moogle.quicknote" target="_blank" class="play-store-button">
+                                    <!-- Google Play Icon (simplified SVG) -->
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M2.51 2.91C2.5 2.5 2.5 2.5 2.51 2.91L2.51 21.09C2.5 21.5 2.5 21.5 2.51 21.09L2.51 2.91ZM5.52 12L5.52 12.01L5.52 12Z" fill="white"/><path d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0C5.373 0 0 5.373 0 12s5.373 12 12 12zM6.9 3.63L19.5 12 6.9 20.37V3.63z" fill="white"/><path d="M6.9 3.63v16.74L19.5 12 6.9 3.63z" fill="#00C853"/></svg>
+                                    Get on Google Play
+                                </a>
+                                <a href="https://github.com/MoogleTechnology/QuickNoteBubbleReader" target="_blank" class="text-xs font-medium text-gray-400 hover:text-white transition duration-150 text-center">
+                                    View Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- App Card 6: Ping Pong - Brick Breaker -->
+                    <div class="app-card rounded-xl overflow-hidden bg-gray-800/50 shadow-2xl">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center text-xl font-bold text-white mr-4">
+                                    <span class="text-2xl">P</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">Ping Pong - Brick Breaker</h3>
+                                    <p class="text-sm text-gray-400">Arcade Game (Free)</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 mb-6 text-base h-20 overflow-hidden">
+                                A modern arcade classic featuring multiple power-ups, smooth physics, and global leaderboards. Endless fun and challenging levels.
+                            </p>
+                            
+                            <div class="flex flex-col space-y-3">
+                                <a href="https://play.google.com/store/apps/details?id=com.moogle.pingpong" target="_blank" class="play-store-button">
+                                    <!-- Google Play Icon (simplified SVG) -->
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M2.51 2.91C2.5 2.5 2.5 2.5 2.51 2.91L2.51 21.09C2.5 21.5 2.5 21.5 2.51 21.09L2.51 2.91ZM5.52 12L5.52 12.01L5.52 12Z" fill="white"/><path d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0C5.373 0 0 5.373 0 12s5.373 12 12 12zM6.9 3.63L19.5 12 6.9 20.37V3.63z" fill="white"/><path d="M6.9 3.63v16.74L19.5 12 6.9 3.63z" fill="#00C853"/></svg>
+                                    Get on Google Play
+                                </a>
+                                <a href="https://github.com/MoogleTechnology/PingPongBrickBreaker" target="_blank" class="text-xs font-medium text-gray-400 hover:text-white transition duration-150 text-center">
+                                    View Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- App Card 7: DIP.MATH - AI Math Classroom -->
+                    <div class="app-card rounded-xl overflow-hidden bg-gray-800/50 shadow-2xl">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-blue-700 rounded-lg flex items-center justify-center text-xl font-bold text-white mr-4">
+                                    <span class="text-2xl">D</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">DIP.MATH - AI Math Classroom</h3>
+                                    <p class="text-sm text-gray-400">Classroom Management (Free)</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 mb-6 text-base h-20 overflow-hidden">
+                                A powerful teaching platform for educators. Features lesson plan generators, sub plan creation, and deep learning analytics.
+                            </p>
+                            
+                            <div class="flex flex-col space-y-3">
+                                <a href="https://play.google.com/store/apps/details?id=com.moogle.dipmath" target="_blank" class="play-store-button">
+                                    <!-- Google Play Icon (simplified SVG) -->
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M2.51 2.91C2.5 2.5 2.5 2.5 2.51 2.91L2.51 21.09C2.5 21.5 2.5 21.5 2.51 21.09L2.51 2.91ZM5.52 12L5.52 12.01L5.52 12Z" fill="white"/><path d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0C5.373 0 0 5.373 0 12s5.373 12 12 12zM6.9 3.63L19.5 12 6.9 20.37V3.63z" fill="white"/><path d="M6.9 3.63v16.74L19.5 12 6.9 3.63z" fill="#00C853"/></svg>
+                                    Get on Google Play
+                                </a>
+                                <a href="https://github.com/MoogleTechnology/DipMath" target="_blank" class="text-xs font-medium text-gray-400 hover:text-white transition duration-150 text-center">
+                                    View Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- App Card 8: EMOJI BLAST: Match & PvP -->
+                    <div class="app-card rounded-xl overflow-hidden bg-gray-800/50 shadow-2xl">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center text-xl font-bold text-white mr-4">
+                                    <span class="text-2xl">E</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">EMOJI BLAST: Match & PvP</h3>
+                                    <p class="text-sm text-gray-400">Multiplayer Game (Free)</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 mb-6 text-base h-20 overflow-hidden">
+                                Fast-paced match-3 puzzle game with competitive Player vs. Player modes. Use power-ups to clear the board and blast your way to victory!
+                            </p>
+                            
+                            <div class="flex flex-col space-y-3">
+                                <a href="https://play.google.com/store/apps/details?id=com.moogle.emojiblast" target="_blank" class="play-store-button">
+                                    <!-- Google Play Icon (simplified SVG) -->
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M2.51 2.91C2.5 2.5 2.5 2.5 2.51 2.91L2.51 21.09C2.5 21.5 2.5 21.5 2.51 21.09L2.51 2.91ZM5.52 12L5.52 12.01L5.52 12Z" fill="white"/><path d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0C5.373 0 0 5.373 0 12s5.373 12 12 12zM6.9 3.63L19.5 12 6.9 20.37V3.63z" fill="white"/><path d="M6.9 3.63v16.74L19.5 12 6.9 3.63z" fill="#00C853"/></svg>
+                                    Get on Google Play
+                                </a>
+                                <a href="https://github.com/MoogleTechnology/EmojiBlast" target="_blank" class="text-xs font-medium text-gray-400 hover:text-white transition duration-150 text-center">
+                                    View Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- App Card 9: BEATDROPS: Neon Block Blast -->
+                    <div class="app-card rounded-xl overflow-hidden bg-gray-800/50 shadow-2xl">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-lime-500 rounded-lg flex items-center justify-center text-xl font-bold text-white mr-4">
+                                    <span class="text-2xl">B</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">BEATDROPS: Neon Block Blast</h3>
+                                    <p class="text-sm text-gray-400">Rhythm Puzzle (Free)</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 mb-6 text-base h-20 overflow-hidden">
+                                A mesmerizing block-stacking puzzle game fused with rhythm action. Clear rows to the beat of dynamic synthwave music. Highly addictive.
+                            </p>
+                            
+                            <div class="flex flex-col space-y-3">
+                                <a href="https://play.google.com/store/apps/details?id=com.moogle.beatdrops" target="_blank" class="play-store-button">
+                                    <!-- Google Play Icon (simplified SVG) -->
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M2.51 2.91C2.5 2.5 2.5 2.5 2.51 2.91L2.51 21.09C2.5 21.5 2.5 21.5 2.51 21.09L2.51 2.91ZM5.52 12L5.52 12.01L5.52 12Z" fill="white"/><path d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0C5.373 0 0 5.373 0 12s5.373 12 12 12zM6.9 3.63L19.5 12 6.9 20.37V3.63z" fill="white"/><path d="M6.9 3.63v16.74L19.5 12 6.9 3.63z" fill="#00C853"/></svg>
+                                    Get on Google Play
+                                </a>
+                                <a href="https://github.com/MoogleTechnology/BeatDrops" target="_blank" class="text-xs font-medium text-gray-400 hover:text-white transition duration-150 text-center">
+                                    View Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- App Card 10: SCAMPOPO - Scam Detector AI -->
+                    <div class="app-card rounded-xl overflow-hidden bg-gray-800/50 shadow-2xl">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-black rounded-lg flex items-center justify-center text-xl font-bold text-white mr-4">
+                                    <span class="text-2xl">SP</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">SCAMPOPO - Scam Detector AI</h3>
+                                    <p class="text-sm text-gray-400">Security Utility (Free)</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 mb-6 text-base h-20 overflow-hidden">
+                                Utilizes advanced AI to analyze text messages, emails, and calls for patterns indicative of phishing and spam, helping you outsmart scammers.
+                            </p>
+                            
+                            <div class="flex flex-col space-y-3">
+                                <a href="https://play.google.com/store/apps/details?id=com.moogle.scampopo" target="_blank" class="play-store-button">
+                                    <!-- Google Play Icon (simplified SVG) -->
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M2.51 2.91C2.5 2.5 2.5 2.5 2.51 2.91L2.51 21.09C2.5 21.5 2.5 21.5 2.51 21.09L2.51 2.91ZM5.52 12L5.52 12.01L5.52 12Z" fill="white"/><path d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0C5.373 0 0 5.373 0 12s5.373 12 12 12zM6.9 3.63L19.5 12 6.9 20.37V3.63z" fill="white"/><path d="M6.9 3.63v16.74L19.5 12 6.9 3.63z" fill="#00C853"/></svg>
+                                    Get on Google Play
+                                </a>
+                                <a href="https://github.com/MoogleTechnology/ScamDetectorAI" target="_blank" class="text-xs font-medium text-gray-400 hover:text-white transition duration-150 text-center">
+                                    View Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- App Card 11: MathCrave: AI Photo Math -->
+                    <div class="app-card rounded-xl overflow-hidden bg-gray-800/50 shadow-2xl">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-indigo-900 rounded-lg flex items-center justify-center text-xl font-bold text-white mr-4">
+                                    <span class="text-2xl">M</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">MathCrave: AI Photo Math</h3>
+                                    <p class="text-sm text-gray-400">Photo Solver (Free)</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 mb-6 text-base h-20 overflow-hidden">
+                                Snap a picture of any handwritten or printed math problem and get instant solutions and detailed explanations powered by advanced AI.
+                            </p>
+                            
+                            <div class="flex flex-col space-y-3">
+                                <a href="https://play.google.com/store/apps/details?id=com.moogle.mathcrave" target="_blank" class="play-store-button">
+                                    <!-- Google Play Icon (simplified SVG) -->
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M2.51 2.91C2.5 2.5 2.5 2.5 2.51 2.91L2.51 21.09C2.5 21.5 2.5 21.5 2.51 21.09L2.51 2.91ZM5.52 12L5.52 12.01L5.52 12Z" fill="white"/><path d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0C5.373 0 0 5.373 0 12s5.373 12 12 12zM6.9 3.63L19.5 12 6.9 20.37V3.63z" fill="white"/><path d="M6.9 3.63v16.74L19.5 12 6.9 3.63z" fill="#00C853"/></svg>
+                                    Get on Google Play
+                                </a>
+                                <a href="https://github.com/MoogleTechnology/MathCrave" target="_blank" class="text-xs font-medium text-gray-400 hover:text-white transition duration-150 text-center">
+                                    View Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#0D0E14] border-t border-gray-800 mt-16">
+        <div class="main-content-wrapper px-4 sm:px-6 lg:px-8 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+                <p class="text-sm text-gray-500">© 2025 MoogleTechnology. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                    <a href="mailto:support@moogletechnology.com" class="text-gray-400 hover:text-white text-sm">Support</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
